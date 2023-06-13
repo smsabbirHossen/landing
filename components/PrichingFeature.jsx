@@ -47,8 +47,8 @@ const monthlyData = [
 const annualData = [
   {
     id: "1",
-    title: "Free Plan",
-    subTitle: "For Small teams or office",
+    title: "Business king",
+    subTitle: "For Enterprise business  ",
     service: [
       { id: 1, name: "Drag & Drop Builder", icon: <IoIosCheckmarkCircle /> },
       { id: 2, name: " 1,000's of Templates", icon: <IoIosCheckmarkCircle /> },
@@ -60,8 +60,8 @@ const annualData = [
   },
   {
     id: "2",
-    title: "Free Plan",
-    subTitle: "For Small teams or office",
+    title: "Pro Master",
+    subTitle: "For pro level developers",
     service: [
       { id: 1, name: "Drag & Drop Builder", icon: <IoIosCheckmarkCircle /> },
       { id: 2, name: " 1,000's of Templates", icon: <IoIosCheckmarkCircle /> },
@@ -78,12 +78,12 @@ const PrichingFeature = () => {
     setToggle(tabs);
   };
   return (
-    <section className="mt-10 overflow-hidden">
+    <section className="mt-10 overflow-hidden md:mb-10  " id="priceing">
       <SectionHeader
         title="Choose your pricing policy"
         subTitle="PRICING PLAN"
       />
-      <div className="w-[300px] h-[60px] bg-[#F7F8FB] flex justify-center items-center gap-5 mb-10  rounded-md m-auto">
+      <div className="w-[300px] h-[60px] bg-gray-200 flex justify-center items-center gap-5 mb-10  rounded-md m-auto  ">
         <button
           type="button"
           className={
@@ -107,7 +107,7 @@ const PrichingFeature = () => {
           Anual Plan
         </button>
       </div>
-      <div className="flex justify-center items-center gap-8 mb-10 flex-wrap ">
+      <div className="flex justify-center items-center gap-8 mb-10 flex-wrap delay-700 ease-in-out duration-300 transition-all ">
         {toggle === "monthly"
           ? monthlyData.map((feature) => (
               <PrichingItem feature={feature} key={feature.id} />

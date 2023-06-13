@@ -15,7 +15,7 @@ import Footer from "@/components/Footer";
 
 const Home = () => {
   return (
-    <section className="w-full flex-center flex-col ">
+    <section className="w-full flex-center flex-col mt-[20px]  " id="/">
       <h1 className="head_text text-center">
         Top Quality Digital
         <br className="" />

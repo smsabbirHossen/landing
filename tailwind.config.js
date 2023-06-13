@@ -14,6 +14,9 @@ module.exports = {
       colors: {
         "primary-orange": "#FF5722",
       },
+      animation: {
+        ping: "ping 2s linear infinite",
+      },
     },
   },
   plugins: [],

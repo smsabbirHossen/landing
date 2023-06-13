@@ -26,7 +26,10 @@ const data = [
 const Services = () => {
   const [play, setPlay] = useState(false);
   return (
-    <section className=" md:flex md:flex-row-reverse   justify-between items-center mt-10 mb-10 relative">
+    <section
+      id="services"
+      className=" md:flex md:flex-row-reverse   justify-between items-center mt-10 mb-10 relative"
+    >
       <div className="w-[100%] h-{100%] p-3 xl:p-20">
         <div>
           <p className="text-sm text-center font-medium text-red-400 uppercase  tracking-widest md:text-left">
@@ -59,32 +62,37 @@ const Services = () => {
         </div>
       </div>
       <div className="serviceImg w-[100%] h-[100%] relative">
-        <button
-          className=" play_button  flex justify-center items-center"
-          onClick={() => setPlay((prev) => !prev)}
-        >
-          <FaPlay size={35} />
-        </button>
+        <div className="absolute flex w-[80px] h-[80px] left-[50%] top-[50%] translate-x-[-50%] translate-y-[-50%]">
+          <button class="animate-ping relative inline-flex h-full w-full rounded-full bg-[#EA3A60] opacity-75"></button>
+          <button
+            className=" absolute   inline-flex justify-center items-center  h-[80px] w-[80px] rounded-full bg-white opacity-60 text-[#EA3A60]"
+            onClick={() => setPlay((prev) => !prev)}
+          >
+            <FaPlay size={35} />
+          </button>
+        </div>
         <Image className="w-[100%] h-[100%] " src={serviceImg} />
       </div>
       {play && (
-        <div className="w-full bg-black h-[500px] absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]">
-          <button
-            type="button "
-            className="w-[50px] h-[50px] z-10 absolute right-[80px] top-1 text-white font-bold text-[30px]  flex justify-center items-center "
-            onClick={() => setPlay((prev) => !prev)}
-          >
-            <AiOutlineCloseCircle />
-          </button>
-          <iframe
-            width="100%"
-            class="aspect-video "
-            src="https://www.youtube-nocookie.com/embed/6O4s7v28nlw"
-            title="Some video title"
-            frameborder=""
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
-          ></iframe>
+        <div className="relative w-full ">
+          <div className=" w-full top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] lg:w-[900px] p-5 mt-3  fixed  z-10">
+            <button
+              type="button "
+              className="w-[50px] h-[50px] bg-[#EA3A60] rounded-full z-10 absoluet top-0 right-0 text-white font-bold text-[30px]  flex justify-center items-center "
+              onClick={() => setPlay((prev) => !prev)}
+            >
+              <AiOutlineCloseCircle />
+            </button>
+            <iframe
+              width="100%"
+              class="aspect-video "
+              src="https://www.youtube-nocookie.com/embed/6O4s7v28nlw"
+              title="Some video title"
+              frameborder=""
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
         </div>
       )}
     </section>

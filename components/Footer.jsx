@@ -4,7 +4,7 @@ import React from "react";
 import logo from "../public/assets/images/logo.svg";
 const Footer = () => {
   return (
-    <section className="w-full  border-t-2 ">
+    <section className="w-full  border-t-2  overflow-hidden">
       <div className="max-w-[500px] m-auto mt-7">
         <Link
           href="/"
@@ -13,7 +13,7 @@ const Footer = () => {
           <Image src={logo} className="w-[30px] h-[30px]" />
           Promptopia Landing
         </Link>
-        <ul className="flex gap-6 justify-center items-center mb-5">
+        <ul className="flex gap-6 justify-center items-center mb-5 flex-wrap">
           <li>
             <Link
               href="/home"

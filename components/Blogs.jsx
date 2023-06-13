@@ -31,7 +31,7 @@ const blogData = [
 ];
 const Blogs = () => {
   return (
-    <section className="mt-10">
+    <section className="mt-10" id="blogs">
       <SectionHeader
         title="Explore our products for your business solution"
         subTitle="OUR BLOG"

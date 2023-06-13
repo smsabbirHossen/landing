@@ -7,7 +7,9 @@
 /* 
   Note: The styles for this gradient grid background is heavily inspired by the creator of this amazing site (https://dub.sh) – all credits go to them! 
 */
-
+html {
+  scroll-behavior: smooth;
+}
 .main {
   width: 100vw;
   min-height: 100vh;
@@ -301,7 +303,7 @@ label{
 
 /* Nav Component */
 .logo_text {
-  @apply max-sm:hidden font-satoshi font-semibold text-lg text-black tracking-wide;
+  @apply  font-satoshi font-semibold text-lg text-black tracking-wide;
 }
 
 .dropdown {
@@ -331,4 +333,7 @@ label{
 
 .flex-between {
   @apply flex justify-between items-center;
+}
+.sticky-nav {
+  @apply fixed top-0 left-0 w-full shadow-md z-30 bg-white  px-7 md:px-20 flex justify-center items-center ;
 }

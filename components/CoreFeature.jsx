@@ -41,9 +41,6 @@ const CoreFeature = () => {
         </div>
       </div>
       <div className="coreImg w-[100%] h-[100%] relative">
-        <button className=" play_button  flex justify-center items-center">
-          <FaPlay size={35} />
-        </button>
         <Image className="w-[100%] h-[100%] " src={coreImg} />
       </div>
     </section>

@@ -8,13 +8,17 @@ export const metadata = {
 
 const RootLayout = ({ children }) => {
   return (
-    <html lang="en">
+    <html
+      lang="en"
+      className="scroll-smooth"
+      style={{ scrollBehavior: "smooth" }}
+    >
       <body>
         <div className="main">
           <div className="gradient"></div>
         </div>
 
-        <main className="app">
+        <main className="app scroll-smooth">
           <Nav />
           {children}
         </main>
