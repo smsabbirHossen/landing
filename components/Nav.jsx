@@ -24,7 +24,7 @@ const Nav = () => {
   };
   return (
     <Reval>
-      <nav className={`relative w-full p-4 ${stickyClass}`}>
+      <nav className={`relative w-full overflow-hidden p-4 ${stickyClass}`}>
         <div className={`flex-between w-full   `}>
           <Link
             to="/"

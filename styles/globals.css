@@ -333,5 +333,5 @@ label{
   @apply flex justify-between items-center;
 }
 .sticky-nav {
-  @apply fixed top-0 left-0 w-full shadow-md z-50 bg-white  px-7 md:px-20 flex justify-center items-center ;
+  @apply fixed top-0 left-0 w-full shadow-md z-50 bg-white  px-7 md:px-20 flex justify-center items-center  overflow-hidden;
 }

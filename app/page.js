@@ -26,7 +26,10 @@ const Home = () => {
         <div className="gradient"></div>
       </div>
       {loading ? (
-        <section className="app scroll-smooth relative" id="/">
+        <section
+          className="app scroll-smooth relative overflow-hidden md:overflow-visible"
+          id="/"
+        >
           <Reval>
             <Nav />
           </Reval>
