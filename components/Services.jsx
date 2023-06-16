@@ -74,6 +74,7 @@ const Services = () => {
           ))}
         </div>
       </div>
+
       <Reval>
         <div className="serviceImg w-[100%] h-[100%] relative">
           <div className="absolute flex w-[80px] h-[80px] left-[50%] top-[50%] translate-x-[-50%] translate-y-[-50%]">
@@ -88,27 +89,26 @@ const Services = () => {
           <Image className="w-[100%] h-[100%] " src={serviceImg} />
         </div>
       </Reval>
+
       {play && (
-        <Reval>
-          <div className="  w-full top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] lg:w-[900px] p-5 mt-3  fixed  z-10 overflow-hidden">
-            <button
-              type="button "
-              className="w-[50px] h-[50px] bg-[#EA3A60] rounded-full z-10 absoluet top-0 right-0 text-white font-bold text-[30px]  flex justify-center items-center "
-              onClick={() => setPlay((prev) => !prev)}
-            >
-              <AiOutlineCloseCircle />
-            </button>
-            <iframe
-              width="100%"
-              class="aspect-video overflow-hidden "
-              src="https://www.youtube-nocookie.com/embed/6O4s7v28nlw"
-              title="Some video title"
-              frameborder=""
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen
-            ></iframe>
-          </div>
-        </Reval>
+        <div className="  w-full top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] lg:w-[900px] p-5 mt-3  fixed  z-10 overflow-hidden">
+          <button
+            type="button "
+            className="w-[50px] h-[50px] bg-[#EA3A60] rounded-full z-10 absoluet top-0 right-0 text-white font-bold text-[30px]  flex justify-center items-center "
+            onClick={() => setPlay((prev) => !prev)}
+          >
+            <AiOutlineCloseCircle />
+          </button>
+          <iframe
+            width="100%"
+            class="aspect-video overflow-hidden "
+            src="https://www.youtube-nocookie.com/embed/6O4s7v28nlw"
+            title="Some video title"
+            frameborder=""
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+        </div>
       )}
     </section>
   );
