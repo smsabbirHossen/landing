@@ -6,6 +6,7 @@ import icon3 from "../public/assets/subscription.svg";
 import icon4 from "../public/assets/support.svg";
 import Image from "next/image";
 import FeatureItem from "./FeatureItem";
+import Reval from "./Reval";
 const data = [
   {
     id: 1,
@@ -35,15 +36,21 @@ const data = [
 const KeyFeature = () => {
   return (
     <div className="mt-10 mb-10">
-      <SectionHeader
-        title="Meet the feature of product"
-        subTitle="WHATS THE FUNCTION"
-      />
-      <div className="grid gap-6 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 ">
-        {data.map((feature) => (
-          <FeatureItem key={feature.id} feature={feature} />
-        ))}
-      </div>
+      <Reval>
+        <SectionHeader
+          title="Meet the feature of product"
+          subTitle="WHATS THE FUNCTION"
+        />
+      </Reval>
+      <Reval>
+        <div className="grid gap-6 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 ">
+          {data.map((feature) => (
+            <Reval>
+              <FeatureItem key={feature.id} feature={feature} />
+            </Reval>
+          ))}
+        </div>
+      </Reval>
     </div>
   );
 };

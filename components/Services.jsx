@@ -8,6 +8,7 @@ import { FaPlay } from "react-icons/fa";
 import PlayButton from "../public/assets/playButton.gif";
 import FeatureItem from "./FeatureItem";
 import { AiOutlineCloseCircle } from "react-icons/ai";
+import Reval from "./Reval";
 
 const data = [
   {
@@ -32,66 +33,82 @@ const Services = () => {
     >
       <div className="w-[100%] h-{100%] p-3 xl:p-20">
         <div>
-          <p className="text-sm text-center font-medium text-red-400 uppercase  tracking-widest md:text-left">
-            Our Services
-          </p>
-          <h2 className="text-3xl font-semibold text-black mb-5 text-center md:text-left xl:text-4xl xl:font-bold">
-            Business Goals Achieved with Design
-          </h2>
+          <Reval>
+            <p className="text-sm text-center font-medium text-red-400 uppercase  tracking-widest md:text-left">
+              Our Services
+            </p>
+          </Reval>
+          <Reval>
+            <h2 className="text-3xl font-semibold text-black mb-5 text-center md:text-left xl:text-4xl xl:font-bold">
+              Business Goals Achieved with Design
+            </h2>
+          </Reval>
         </div>
         <div>
           {data.map((feature) => (
-            <div
-              className="max-w-[450px] py-4 xl:p-4 flex gap-3"
-              key={feature.id}
-            >
-              <Image
-                src={feature.image}
-                className="m-auto md:m-0 w-[100px] h-[100px]"
-              />
-              <div>
-                <h3 className="font-semibold text-[21px] mb-3text-left">
-                  {feature.title}
-                </h3>
-                <p className="text-[12px]  text-left font-medium xl:text-[14px]">
-                  {feature.desc}
-                </p>
+            <Reval>
+              <div
+                className="max-w-[450px] py-4 xl:p-4 flex gap-3"
+                key={feature.id}
+              >
+                <Reval>
+                  <Image
+                    src={feature.image}
+                    className="m-auto md:m-0 w-[100px] h-[100px]"
+                  />
+                </Reval>
+                <div>
+                  <Reval>
+                    <h3 className="font-semibold text-[21px] mb-3text-left">
+                      {feature.title}
+                    </h3>
+                  </Reval>
+                  <Reval>
+                    <p className="text-[12px]  text-left font-medium xl:text-[14px]">
+                      {feature.desc}
+                    </p>
+                  </Reval>
+                </div>
               </div>
-            </div>
+            </Reval>
           ))}
         </div>
       </div>
-      <div className="serviceImg w-[100%] h-[100%] relative">
-        <div className="absolute flex w-[80px] h-[80px] left-[50%] top-[50%] translate-x-[-50%] translate-y-[-50%]">
-          <button class="animate-ping relative inline-flex h-full w-full rounded-full bg-[#EA3A60] opacity-75"></button>
-          <button
-            className=" absolute   inline-flex justify-center items-center  h-[80px] w-[80px] rounded-full bg-white opacity-60 text-[#EA3A60]"
-            onClick={() => setPlay((prev) => !prev)}
-          >
-            <FaPlay size={35} />
-          </button>
+      <Reval>
+        <div className="serviceImg w-[100%] h-[100%] relative">
+          <div className="absolute flex w-[80px] h-[80px] left-[50%] top-[50%] translate-x-[-50%] translate-y-[-50%]">
+            <button class="animate-ping relative inline-flex h-full w-full rounded-full bg-[#EA3A60] opacity-75"></button>
+            <button
+              className=" absolute   inline-flex justify-center items-center  h-[80px] w-[80px] rounded-full bg-white opacity-60 text-[#EA3A60]"
+              onClick={() => setPlay((prev) => !prev)}
+            >
+              <FaPlay size={35} />
+            </button>
+          </div>
+          <Image className="w-[100%] h-[100%] " src={serviceImg} />
         </div>
-        <Image className="w-[100%] h-[100%] " src={serviceImg} />
-      </div>
+      </Reval>
       {play && (
-        <div className="  w-full top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] lg:w-[900px] p-5 mt-3  fixed  z-10 overflow-hidden">
-          <button
-            type="button "
-            className="w-[50px] h-[50px] bg-[#EA3A60] rounded-full z-10 absoluet top-0 right-0 text-white font-bold text-[30px]  flex justify-center items-center "
-            onClick={() => setPlay((prev) => !prev)}
-          >
-            <AiOutlineCloseCircle />
-          </button>
-          <iframe
-            width="100%"
-            class="aspect-video overflow-hidden "
-            src="https://www.youtube-nocookie.com/embed/6O4s7v28nlw"
-            title="Some video title"
-            frameborder=""
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
-          ></iframe>
-        </div>
+        <Reval>
+          <div className="  w-full top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] lg:w-[900px] p-5 mt-3  fixed  z-10 overflow-hidden">
+            <button
+              type="button "
+              className="w-[50px] h-[50px] bg-[#EA3A60] rounded-full z-10 absoluet top-0 right-0 text-white font-bold text-[30px]  flex justify-center items-center "
+              onClick={() => setPlay((prev) => !prev)}
+            >
+              <AiOutlineCloseCircle />
+            </button>
+            <iframe
+              width="100%"
+              class="aspect-video overflow-hidden "
+              src="https://www.youtube-nocookie.com/embed/6O4s7v28nlw"
+              title="Some video title"
+              frameborder=""
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
+        </Reval>
       )}
     </section>
   );

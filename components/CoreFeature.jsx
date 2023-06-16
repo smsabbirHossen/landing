@@ -6,6 +6,7 @@ import icon1 from "../public/assets/subscription.svg";
 import { FaPlay } from "react-icons/fa";
 import PlayButton from "../public/assets/playButton.gif";
 import FeatureItem from "./FeatureItem";
+import Reval from "./Reval";
 const data = [
   {
     id: 1,
@@ -25,23 +26,34 @@ const CoreFeature = () => {
     <section className=" md:flex    justify-between items-center mt-10 mb-10 overflow-hidden">
       <div className=" w-[100%] md:w-[80%] h-[100%] p-4 ">
         <div>
-          <p className="text-sm text-center font-medium text-red-400 uppercase  tracking-widest md:text-left">
-            CORE FEATURES
-          </p>
-          <h2 className="text-3xl font-semibold text-black mb-5 text-center md:text-left xl:text-4xl xl:font-bold tracking-[1.1px] ">
-            Smart Jackpots that you may love this anytime & anywhere
-          </h2>
-          <p className=" text-[18px] leading-7 tracking-normal mb-5 text-center md:text-left">
-            Get your tests delivered at let home collect sample from the victory
-            of the managements that supplies best design system guidelines ever.
-          </p>
-          <button type="button" className="black_btn m-auto md:m-0">
-            Get Started
-          </button>
+          <Reval>
+            <p className="text-sm text-center font-medium text-red-400 uppercase  tracking-widest md:text-left">
+              CORE FEATURES
+            </p>
+          </Reval>
+          <Reval>
+            <h2 className="text-3xl font-semibold text-black mb-5 text-center md:text-left xl:text-4xl xl:font-bold tracking-[1.1px] ">
+              Smart Jackpots that you may love this anytime & anywhere
+            </h2>
+          </Reval>
+          <Reval>
+            <p className=" text-[18px] leading-7 tracking-normal mb-5 text-center md:text-left">
+              Get your tests delivered at let home collect sample from the
+              victory of the managements that supplies best design system
+              guidelines ever.
+            </p>
+          </Reval>
+          <Reval>
+            <button type="button" className="black_btn m-auto md:m-0">
+              Get Started
+            </button>
+          </Reval>
         </div>
       </div>
       <div className="coreImg w-[100%] h-[100%] relative">
-        <Image className="w-[100%] h-[100%] " src={coreImg} />
+        <Reval>
+          <Image className="w-[100%] h-[100%] " src={coreImg} />
+        </Reval>
       </div>
     </section>
   );

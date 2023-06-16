@@ -1,11 +1,17 @@
 import Image from "next/image";
 import React from "react";
 import bannerImg from "../public/assets/banner.png";
+import Reval from "./Reval";
 const Banner = () => {
   return (
-    <div className=" banner overflow-hidden ">
-      <Image className="mt-20 overflow-hidden" src={bannerImg} />
-    </div>
+    <Reval>
+      <div className=" banner w-full  flex flex-col justify-center items-center   ">
+        <Image
+          className="mt-10  w-[100%] h-auto max-w-[1000px]   md:mt-20"
+          src={bannerImg}
+        />
+      </div>
+    </Reval>
   );
 };
 

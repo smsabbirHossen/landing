@@ -39,6 +39,7 @@ const testimonialData = [
 ];
 import { people02 } from "@/public/assets";
 import TestimonialItem from "./TestimonialItem";
+import Reval from "./Reval";
 const settings = {
   dots: true,
   infinite: true,
@@ -48,7 +49,12 @@ const settings = {
 const Testimonial = () => {
   return (
     <section className="w-full mt-10" id="client">
-      <SectionHeader title="Meet Client Satisfaction" subTitle="TESTIMONIAL" />
+      <Reval>
+        <SectionHeader
+          title="Meet Client Satisfaction"
+          subTitle="TESTIMONIAL"
+        />
+      </Reval>
 
       <div className="w-full flex justify-center items-center gap-10 mb-10 flex-wrap  ">
         {testimonialData.map((testimonial) => (
@@ -56,14 +62,23 @@ const Testimonial = () => {
         ))}
       </div>
 
-      <div className="flex justify-center items-center gap-10 mb-10">
-        <button type="button">
-          <AiOutlineArrowLeft className="text-gray-500 font-bold " size={25} />
-        </button>
-        <button>
-          <AiOutlineArrowRight className="text-gray-500 font-bold " size={25} />
-        </button>
-      </div>
+      <Reval>
+        <div className="flex justify-center items-center gap-10 mb-10">
+          <button type="button">
+            <AiOutlineArrowLeft
+              className="text-gray-500 font-bold "
+              size={25}
+            />
+          </button>
+
+          <button>
+            <AiOutlineArrowRight
+              className="text-gray-500 font-bold "
+              size={25}
+            />
+          </button>
+        </div>
+      </Reval>
     </section>
   );
 };
