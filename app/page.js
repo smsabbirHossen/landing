@@ -22,8 +22,11 @@ const Home = () => {
   }, []);
   return (
     <section>
+      <div className="main">
+        <div className="gradient"></div>
+      </div>
       {loading ? (
-        <section className="w-full flex-center flex-col mt-[20px]  " id="/">
+        <section className="app scroll-smooth relative" id="/">
           <Reval>
             <Nav />
           </Reval>
