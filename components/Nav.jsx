@@ -110,7 +110,7 @@ const Nav = () => {
           </div>
           <div className="lg:flex hidden">
             <div className="flex gap-3 md:gap-5">
-              <Link href="/create-prompt" className="black_btn">
+              <Link to="/" className="black_btn">
                 Latest Post
               </Link>
               <button type="button" className="outline_btn">

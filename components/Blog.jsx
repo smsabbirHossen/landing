@@ -5,10 +5,10 @@ import Reval from "./Reval";
 const Blog = ({ blog }) => {
   const { title, image, name, date } = blog;
   return (
-    <div className="border border-gray-100   rounded-[20px] bg-white max-w-[350px] transition ease-in-out hover:drop-shadow-[0_35px_35px_rgba(0,0,0,0.25)] duration-300">
+    <div className="border border-gray-100   rounded-[20px] bg-white max-w-[320px] lg:max-w-[350px] transition ease-in-out hover:drop-shadow-[0_35px_35px_rgba(0,0,0,0.25)] duration-300 m-auto">
       <div>
         <Reval>
-          <Image src={image} className="rounded-t-[20px]" />
+          <Image alt="blogImg" src={image} className="rounded-t-[20px]" />
         </Reval>
       </div>
 

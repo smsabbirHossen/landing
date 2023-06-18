@@ -53,10 +53,11 @@ const Home = () => {
           <Banner />
           <KeyFeature />
           <Services />
-          <Qualitys />
+
           <PrichingFeature />
           <CoreFeature />
           <SimpleSlider />
+          <Qualitys />
           <Blogs />
           <Subscribe />
           <NewsSelter />

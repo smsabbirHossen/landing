@@ -12,13 +12,13 @@ const newsSelterData = [
     image: join,
   },
   {
-    id: 1,
+    id: 2,
     title: "Chat communication",
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit sed eiusmod tempor.",
     image: chat,
   },
   {
-    id: 1,
+    id: 3,
     title: "Github Acess",
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit sed eiusmod tempor.",
     image: github,
@@ -38,6 +38,7 @@ const NewsSelter = () => {
                 <Image
                   src={news.image}
                   className="w-[50px] h-[50px] mb-7 m-auto"
+                  alt="newsImg"
                 />
               </Reval>
               <Reval>

@@ -15,15 +15,13 @@ const PrichingItem = ({ feature }) => {
       <Reval>
         <ul className="flex flex-col gap-4 mb-10">
           {feature.service.map((item, i) => (
-            <Reval>
-              <li
-                className={`flex items-center gap-2 text-gray-600 text-[16px]`}
-                key={item.id}
-              >
-                <div className="text-[#EA3A60] text-[25px]">{item.icon}</div>
-                {item.name}
-              </li>
-            </Reval>
+            <li
+              className={`flex items-center gap-2 text-gray-600 text-[16px]`}
+              key={item.id}
+            >
+              <div className="text-[#EA3A60] text-[25px]">{item.icon}</div>
+              {item.name}
+            </li>
           ))}
         </ul>
       </Reval>

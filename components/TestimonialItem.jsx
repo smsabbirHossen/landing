@@ -6,7 +6,7 @@ import Reval from "./Reval";
 const TestimonialItem = ({ testimonial }) => {
   const { title, description, person, name, gmail } = testimonial;
   return (
-    <div className="border border-gray-100 p-12  rounded-[20px] bg-white max-w-[350px] transition ease-in-out hover:drop-shadow-[0_35px_35px_rgba(0,0,0,0.25)] duration-300">
+    <div className="border border-gray-100 p-12 m-auto  rounded-[20px] bg-white max-w-[320px] lg:max-w-[350px] transition ease-in-out hover:drop-shadow-[0_35px_35px_rgba(0,0,0,0.25)] duration-300 ">
       <Reval>
         <div className="flex gap-2  items-center mb-5">
           {start.map((item) => (
@@ -26,7 +26,11 @@ const TestimonialItem = ({ testimonial }) => {
       </div>
       <Reval>
         <div className="flex justify-start items-center gap-5">
-          <Image src={person} className="w-[50px] h-[50px]" />
+          <Image
+            src={person}
+            className="w-[50px] h-[50px]"
+            alt="testominalImg"
+          />
 
           <div>
             <Reval>

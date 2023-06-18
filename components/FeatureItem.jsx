@@ -6,7 +6,11 @@ const FeatureItem = ({ feature }) => {
     <Reval>
       <div className="max-w-[350px] p-4">
         <Reval>
-          <Image src={feature.image} className="m-auto md:m-0 " />
+          <Image
+            src={feature.image}
+            alt="featureImg"
+            className="m-auto md:m-0 "
+          />
         </Reval>
         <Reval>
           <h3 className="font-semibold text-[21px] mb-3 text-center md:text-left">

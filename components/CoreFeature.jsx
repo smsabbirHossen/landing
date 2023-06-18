@@ -52,7 +52,7 @@ const CoreFeature = () => {
       </div>
       <div className="coreImg w-[100%] h-[100%] relative">
         <Reval>
-          <Image className="w-[100%] h-[100%] " src={coreImg} />
+          <Image className="w-[100%] h-[100%] " alt="coreImg" src={coreImg} />
         </Reval>
       </div>
     </section>

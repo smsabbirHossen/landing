@@ -46,31 +46,32 @@ const Services = () => {
         </div>
         <div>
           {data.map((feature) => (
-            <Reval>
-              <div
-                className="max-w-[450px] py-4 xl:p-4 flex gap-3"
-                key={feature.id}
-              >
+            <div
+              className="max-w-[450px] py-4 xl:p-4 flex gap-3"
+              key={feature.id}
+            >
+              <div className="w-[220px]">
                 <Reval>
                   <Image
                     src={feature.image}
+                    alt="serviceImg"
                     className="m-auto md:m-0 w-[100px] h-[100px]"
                   />
                 </Reval>
-                <div>
-                  <Reval>
-                    <h3 className="font-semibold text-[21px] mb-3text-left">
-                      {feature.title}
-                    </h3>
-                  </Reval>
-                  <Reval>
-                    <p className="text-[12px]  text-left font-medium xl:text-[14px]">
-                      {feature.desc}
-                    </p>
-                  </Reval>
-                </div>
               </div>
-            </Reval>
+              <div>
+                <Reval>
+                  <h3 className="font-semibold text-[21px] mb-3text-left">
+                    {feature.title}
+                  </h3>
+                </Reval>
+                <Reval>
+                  <p className="text-[12px]  text-left font-medium xl:text-[14px]">
+                    {feature.desc}
+                  </p>
+                </Reval>
+              </div>
+            </div>
           ))}
         </div>
       </div>
@@ -78,7 +79,7 @@ const Services = () => {
       <Reval>
         <div className="serviceImg w-[100%] h-[100%] relative">
           <div className="absolute flex w-[80px] h-[80px] left-[50%] top-[50%] translate-x-[-50%] translate-y-[-50%]">
-            <button class="animate-ping relative inline-flex h-full w-full rounded-full bg-[#EA3A60] opacity-75"></button>
+            <button className="animate-ping relative inline-flex h-full w-full rounded-full bg-[#EA3A60] opacity-75"></button>
             <button
               className=" absolute   inline-flex justify-center items-center  h-[80px] w-[80px] rounded-full bg-white opacity-60 text-[#EA3A60]"
               onClick={() => setPlay((prev) => !prev)}
@@ -86,7 +87,11 @@ const Services = () => {
               <FaPlay size={35} />
             </button>
           </div>
-          <Image className="w-[100%] h-[100%] " src={serviceImg} />
+          <Image
+            className="w-[100%] h-[100%]"
+            alt="serviceImg"
+            src={serviceImg}
+          />
         </div>
       </Reval>
 
@@ -101,7 +106,7 @@ const Services = () => {
           </button>
           <iframe
             width="100%"
-            class="aspect-video overflow-hidden "
+            className="aspect-video overflow-hidden "
             src="https://www.youtube-nocookie.com/embed/6O4s7v28nlw"
             title="Some video title"
             frameborder=""

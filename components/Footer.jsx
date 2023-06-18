@@ -13,7 +13,7 @@ const Footer = () => {
             href="/"
             className="flex justify-center items-center gap-2 font-bold text-[20px] mb-7"
           >
-            <Image src={logo} className="w-[30px] h-[30px]" />
+            <Image alt="logoImg" src={logo} className="w-[30px] h-[30px]" />
             Promptopia Landing
           </Link>
         </Reval>

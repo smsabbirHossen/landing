@@ -4,7 +4,11 @@ import preloadrImg from "../public/assets/preloader.gif";
 const PreLoader = () => {
   return (
     <div className="w-[100%] h-screen overflow-hidden flex justify-center items-center ">
-      <Image src={preloadrImg} className=" overflow-hidden" />
+      <Image
+        alt="preloaderImg"
+        src={preloadrImg}
+        className=" overflow-hidden"
+      />
     </div>
   );
 };

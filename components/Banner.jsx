@@ -9,6 +9,7 @@ const Banner = () => {
         <Image
           className="mt-10  w-[100%] h-auto max-w-[1000px]   md:mt-20"
           src={bannerImg}
+          alt="banner"
         />
       </div>
     </Reval>
